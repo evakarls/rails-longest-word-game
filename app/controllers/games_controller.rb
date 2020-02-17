@@ -13,7 +13,7 @@ class GamesController < ApplicationController
     url = "https://wagon-dictionary.herokuapp.com/#{@word}"
     word_serialized = open(url).read
     english_word = JSON.parse(word_serialized)
-    if english_word["found"] == true
+    if english_word['found'] == true
       @answer = "Congratulations! #{@word} is a valid English word!"
     end
   end
