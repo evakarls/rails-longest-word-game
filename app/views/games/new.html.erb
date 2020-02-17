@@ -1,0 +1,14 @@
+<h1>Welcome to the longest word game!</h1>
+<p>Here's your grid:</p>
+<ul id="list">
+  <% @random_array.each do |character| %>
+    <li><%= character %></li>
+  <% end %>
+</ul>
+
+<p>What is the longest word you can find?</p>
+<form action="/score" id="form">
+  <input type="text" name="word" id="input">
+  <input type="submit" value="Play!" id="submit-btn">
+</form>
+
